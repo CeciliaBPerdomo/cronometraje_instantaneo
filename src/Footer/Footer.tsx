@@ -1,9 +1,7 @@
 function Footer() {
   return (
     <footer className="mt-auto w-full bg-black py-4 text-lime-400">
-      <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="mb-3 w-full border-t-2 border-lime-400" aria-hidden="true" />
-      </div>
+      
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 md:grid-cols-3">
         <div className="text-left">
           <h3 className="text-base font-semibold">

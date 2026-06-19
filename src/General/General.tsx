@@ -1,6 +1,6 @@
 import cacImage from '../assets/cac.png'
 import conociendoImage from '../assets/conociendo.jpg'
-import comboImage from '../assets/combo.png'
+import comboImage from '../assets/combo-colonia-10-k.jpg'
 import { Link } from 'react-router-dom'
 
 function General() {
@@ -10,7 +10,7 @@ function General() {
         <Link
           to="/cac"
           aria-label="Ir a la pagina de Triple Corona CAC"
-          className="group overflow-hidden rounded-xl border border-lime-400/40 bg-neutral-900 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]"
+          className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]"
         >
           <img
             src={cacImage}
@@ -19,7 +19,7 @@ function General() {
           />
         </Link>
 
-        <article className="group overflow-hidden rounded-xl border border-lime-400/40 bg-neutral-900 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]">
+        <article className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]">
           <img
             src={conociendoImage}
             alt="Conociendo"
@@ -27,7 +27,7 @@ function General() {
           />
         </article>
 
-        <article className="group overflow-hidden rounded-xl border border-lime-400/40 bg-neutral-900 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]">
+        <article className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]">
           <img
             src={comboImage}
             alt="Combo"
