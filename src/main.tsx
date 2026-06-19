@@ -10,7 +10,7 @@ import Footer from './Footer/Footer.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <main className="flex min-h-screen flex-col bg-white">
+      <main className="flex min-h-screen flex-col bg-black">
         <Header />
         <Routes>
           <Route path="/" element={<App />} />
