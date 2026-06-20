@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import CacPage from './pages/CacPage.tsx'
+import ConociendoColoniaPage from './pages/ConociendoColoniaPage.tsx'
 import Header from './Header/Header.tsx'
 import Footer from './Footer/Footer.tsx'
 
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/cac" element={<CacPage />} />
+          <Route path="/conociendo-colonia-mtb" element={<ConociendoColoniaPage />} />
         </Routes>
         <Footer />
       </main>
