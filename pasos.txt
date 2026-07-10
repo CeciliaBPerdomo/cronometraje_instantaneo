@@ -1,0 +1,9 @@
+1. Terminal - new Terminal
+npm run dev
+Entrar a  http://localhost:5173/ desde el chrome
+
+Para enviar cambios a internet, en la terminal
+ctrl + c
+git add .
+git commit -m "cambios"
+git push origin master
