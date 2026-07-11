@@ -26,7 +26,7 @@ function TripleCorona() {
           <p className="mt-1 text-base text-neutral-700">7 de Junio</p>
           <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
             <a
-              href="https://cronometrajeinstantaneo.com/resultados/cerros-de-san-juan-26/generales"
+              href="https://cronometrajeinstantaneo.com/resultados/cerros-de-san-juan-26/filtros"
               target="_blank"
               rel="noreferrer"
               className="flex min-h-28 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-5 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
@@ -51,7 +51,7 @@ function TripleCorona() {
           <p className="mt-1 text-base text-neutral-700">5 de Julio</p>
           <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
             <a
-              href="https://cronometrajeinstantaneo.com/resultados/medanos-del-calabres-2026/generales"
+              href="https://cronometrajeinstantaneo.com/resultados/medanos-del-calabres-2026/filtros?r=1"
               target="_blank"
               rel="noreferrer"
               className="flex min-h-28 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-5 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
