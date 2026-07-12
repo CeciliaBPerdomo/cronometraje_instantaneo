@@ -31,13 +31,17 @@ function General() {
           />
         </Link>
 
-        <article className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]">
+        <Link
+          to="/combo"
+          aria-label="Ir a la pagina de Combo Colonia 10K"
+          className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]"
+        >
           <img
             src={comboImage}
             alt="Combo"
             className="h-56 w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
           />
-        </article>
+        </Link>
       </div>
     </section>
   )
