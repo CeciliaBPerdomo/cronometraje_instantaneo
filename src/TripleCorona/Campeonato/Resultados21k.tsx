@@ -102,6 +102,14 @@ function Resultados21k() {
 
   const debeResaltarCoincidencia = cantidadCoincidenciasNombre === 1
 
+  const personaEncontrada = useMemo(() => {
+    if (!debeResaltarCoincidencia) {
+      return null
+    }
+
+    return resultadosFiltrados.find((fila) => coincideNombreBuscado(fila.nombre)) ?? null
+  }, [debeResaltarCoincidencia, resultadosFiltrados, coincideNombreBuscado])
+
   useEffect(() => {
     setPaginaActual(1)
   }, [filtroNombre, filtroGenero, filtroCategoria])
@@ -167,7 +175,7 @@ function Resultados21k() {
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-xs font-semibold uppercase tracking-widest text-neutral-700">Categoria</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-neutral-700">Categoría</span>
           <select
             value={filtroCategoria}
             onChange={(event) => setFiltroCategoria(event.target.value)}
@@ -182,6 +190,26 @@ function Resultados21k() {
         </label>
       </div>
 
+      {personaEncontrada && (
+        <div className="mb-5 rounded-xl border border-lime-300 bg-lime-100/70 p-4">
+          <p className="text-sm font-semibold uppercase tracking-widest text-lime-800">{personaEncontrada.nombre}</p>
+          <div className="mt-2 grid grid-cols-1 gap-2 text-sm text-neutral-800 sm:grid-cols-3">
+            <p>
+              <span className="font-semibold">Género:</span> {formatearGenero(personaEncontrada.genero)}
+            </p>
+            <p>
+              <span className="font-semibold">Categoría:</span> {formatearCategoria(personaEncontrada.categoria)}
+            </p>
+            <p>
+              <span className="font-semibold">Posición categoría:</span> {personaEncontrada.posCat}
+            </p>
+            <p>
+              <span className="font-semibold">Puntaje:</span> {personaEncontrada.total}
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="overflow-x-auto rounded-xl border border-lime-100">
         <table className="min-w-full border-collapse text-sm">
           <thead className="bg-lime-100 text-neutral-800">
@@ -190,11 +218,11 @@ function Resultados21k() {
               <th className="px-3 py-2 text-left font-bold">Nombre</th>
               <th className="px-3 py-2 text-left font-bold">Género</th>
               <th className="px-3 py-2 text-center font-bold">Categoría</th>
-              <th className="px-3 py-2 text-center font-bold">Pos. Cat.</th>
+              <th className="px-3 py-2 text-center font-bold">Posición Categoría</th>
               <th className="px-3 py-2 text-center font-bold">Fecha 1</th>
               <th className="px-3 py-2 text-center font-bold">Fecha 2</th>
               <th className="px-3 py-2 text-center font-bold">Fecha 3</th>
-              <th className="px-3 py-2 text-center font-bold">Total</th>
+              <th className="px-3 py-2 text-center font-bold">Puntaje</th>
             </tr>
           </thead>
           <tbody>
