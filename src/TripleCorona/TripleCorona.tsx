@@ -74,14 +74,22 @@ function TripleCorona() {
           <h2 className="mb-2 text-xl font-semibold text-neutral-900">Anchorena Trail</h2>
           <p className="text-base text-neutral-700">La consagración</p>
           <p className="mt-1 text-base text-neutral-700">2 de Agosto</p>
-          <a
-            href="https://ticketfacil.uy/event/Triple-Corona-CAC-Anchorena-Trail/info"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 flex min-h-28 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-lime-800 transition-colors duration-200 hover:bg-lime-100"
-          >
-            Inscripciones Abiertas
-          </a>
+          <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
+            <a
+              href="https://cronometrajeinstantaneo.com/resultados/anchorena-2026/categorias?r=1"
+              target="_blank"
+              rel="noreferrer"
+              className="flex min-h-28 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-5 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+            >
+              Tiempos
+            </a>
+            <div className="flex min-h-28 flex-col items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-5 text-lime-800">
+              <span>Fotos</span>
+              <span className="mt-1 text-xs font-medium uppercase tracking-[0.08em] text-neutral-500">
+                PROXIMAMENTE
+              </span>
+            </div>
+          </div>
         </article>
       </section>
 
