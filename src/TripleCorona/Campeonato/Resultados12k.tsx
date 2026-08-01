@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { resultados6k } from './resultados6kData'
+import { resultados12k } from './resultados12kData'
 
 const formatearGenero = (genero: 'M' | 'F') => (genero === 'M' ? 'Masculino' : 'Femenino')
 
@@ -18,7 +18,7 @@ const obtenerEdadMinima = (categoria: string) => {
   return Number.isNaN(numeroInicial) ? Number.MAX_SAFE_INTEGER : numeroInicial
 }
 
-function Resultados6k() {
+function Resultados12k() {
   const mostrarPuntaje = (valor: number | null) => (valor === null ? '-' : valor)
   const resultadosPorPagina = 20
   const [filtroNombre, setFiltroNombre] = useState('')
@@ -33,7 +33,7 @@ function Resultados6k() {
       .replace(/[\u0300-\u036f]/g, '')
 
   const categorias = useMemo(() => {
-    const categoriasUnicas = [...new Set(resultados6k.map((fila) => fila.categoria))]
+    const categoriasUnicas = [...new Set(resultados12k.map((fila) => fila.categoria))]
     categoriasUnicas.sort((a, b) => {
       const diferenciaEdad = obtenerEdadMinima(a) - obtenerEdadMinima(b)
       if (diferenciaEdad !== 0) {
@@ -51,7 +51,7 @@ function Resultados6k() {
       return categorias
     }
 
-    const prefijoCategoria = filtroGenero === 'F' ? '0F' : '0M'
+    const prefijoCategoria = filtroGenero === 'F' ? '1F' : '1M'
     return categorias.filter(
       (categoria) => categoria === 'TODAS' || categoria.startsWith(prefijoCategoria),
     )
@@ -72,7 +72,7 @@ function Resultados6k() {
   )
 
   const resultadosFiltrados = useMemo(() => {
-    const resultadosBase = resultados6k.filter((fila) => {
+    const resultadosBase = resultados12k.filter((fila) => {
       const coincideGenero = filtroGenero === 'TODOS' || fila.genero === filtroGenero
       const coincideCategoria = filtroCategoria === 'TODAS' || fila.categoria === filtroCategoria
 
@@ -124,7 +124,7 @@ function Resultados6k() {
     <section className="mx-auto w-full max-w-6xl rounded-2xl border border-lime-200 bg-white p-4 shadow-md sm:p-6">
       <header className="mb-5 text-center">
         <h1 className="text-2xl font-extrabold tracking-tight text-neutral-900 sm:text-3xl">
-          Resultados 6K - Triple Corona
+          Resultados 12K - Triple Corona
         </h1>
         <p className="mt-1 text-sm text-neutral-600 sm:text-base">
           Clasificación oficial
@@ -192,7 +192,9 @@ function Resultados6k() {
               <tr
                 key={`${fila.nombre}-${fila.categoria}-${indiceInicio + index}`}
                 className={`border-t border-lime-100 ${
-                  coincideNombreBuscado(fila.nombre) ? 'bg-lime-200/70' : 'odd:bg-white even:bg-lime-50/40'
+                  coincideNombreBuscado(fila.nombre)
+                    ? 'bg-lime-200/70'
+                    : 'odd:bg-white even:bg-lime-50/40'
                 }`}
               >
                 <td className="whitespace-nowrap px-3 py-2 text-neutral-700">{indiceInicio + index + 1}</td>
@@ -253,10 +255,10 @@ function Resultados6k() {
       </div>
 
       <p className="mt-3 text-center text-sm text-neutral-600">
-        Mostrando {resultadosFiltrados.length === 0 ? 0 : indiceInicio + 1}-{Math.min(indiceFin, resultadosFiltrados.length)} de {resultadosFiltrados.length} resultados filtrados ({resultados6k.length} totales)
+        Mostrando {resultadosFiltrados.length === 0 ? 0 : indiceInicio + 1}-{Math.min(indiceFin, resultadosFiltrados.length)} de {resultadosFiltrados.length} resultados filtrados ({resultados12k.length} totales)
       </p>
     </section>
   )
 }
 
-export default Resultados6k
+export default Resultados12k
