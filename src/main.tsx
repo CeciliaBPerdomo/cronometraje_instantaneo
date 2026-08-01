@@ -10,6 +10,7 @@ import Header from './Header/Header.tsx'
 import Footer from './Footer/Footer.tsx'
 import Resultados6k from './TripleCorona/Campeonato/Resultados_6k.tsx'
 import Resultados12k from './TripleCorona/Campeonato/Resultados12k.tsx'
+import Resultados21k from './TripleCorona/Campeonato/Resultados21k.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/combo" element={<ComboPage />} />
           <Route path="/triple-corona/resultados-6k" element={<Resultados6k />} />
           <Route path="/triple-corona/resultados-12k" element={<Resultados12k />} />
+          <Route path="/triple-corona/resultados-21k" element={<Resultados21k />} />
         </Routes>
         <Footer />
       </main>

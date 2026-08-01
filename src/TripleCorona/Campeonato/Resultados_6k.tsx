@@ -92,6 +92,16 @@ function Resultados6k() {
     return resultadosBase.filter((fila) => categoriasConCoincidencias.has(fila.categoria))
   }, [filtroGenero, filtroCategoria, coincideNombreBuscado, nombreBuscado])
 
+  const cantidadCoincidenciasNombre = useMemo(() => {
+    if (nombreBuscado.length === 0) {
+      return 0
+    }
+
+    return resultadosFiltrados.filter((fila) => coincideNombreBuscado(fila.nombre)).length
+  }, [resultadosFiltrados, coincideNombreBuscado, nombreBuscado])
+
+  const debeResaltarCoincidencia = cantidadCoincidenciasNombre === 1
+
   useEffect(() => {
     setPaginaActual(1)
   }, [filtroNombre, filtroGenero, filtroCategoria])
@@ -192,7 +202,9 @@ function Resultados6k() {
               <tr
                 key={`${fila.nombre}-${fila.categoria}-${indiceInicio + index}`}
                 className={`border-t border-lime-100 ${
-                  coincideNombreBuscado(fila.nombre) ? 'bg-lime-200/70' : 'odd:bg-white even:bg-lime-50/40'
+                  debeResaltarCoincidencia && coincideNombreBuscado(fila.nombre)
+                    ? 'bg-lime-200/70'
+                    : 'odd:bg-white even:bg-lime-50/40'
                 }`}
               >
                 <td className="whitespace-nowrap px-3 py-2 text-neutral-700">{indiceInicio + index + 1}</td>

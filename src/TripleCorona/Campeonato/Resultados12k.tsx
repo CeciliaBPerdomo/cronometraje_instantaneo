@@ -92,6 +92,16 @@ function Resultados12k() {
     return resultadosBase.filter((fila) => categoriasConCoincidencias.has(fila.categoria))
   }, [filtroGenero, filtroCategoria, coincideNombreBuscado, nombreBuscado])
 
+  const cantidadCoincidenciasNombre = useMemo(() => {
+    if (nombreBuscado.length === 0) {
+      return 0
+    }
+
+    return resultadosFiltrados.filter((fila) => coincideNombreBuscado(fila.nombre)).length
+  }, [resultadosFiltrados, coincideNombreBuscado, nombreBuscado])
+
+  const debeResaltarCoincidencia = cantidadCoincidenciasNombre === 1
+
   useEffect(() => {
     setPaginaActual(1)
   }, [filtroNombre, filtroGenero, filtroCategoria])
@@ -192,7 +202,7 @@ function Resultados12k() {
               <tr
                 key={`${fila.nombre}-${fila.categoria}-${indiceInicio + index}`}
                 className={`border-t border-lime-100 ${
-                  coincideNombreBuscado(fila.nombre)
+                  debeResaltarCoincidencia && coincideNombreBuscado(fila.nombre)
                     ? 'bg-lime-200/70'
                     : 'odd:bg-white even:bg-lime-50/40'
                 }`}
