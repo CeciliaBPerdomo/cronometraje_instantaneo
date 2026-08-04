@@ -11,10 +11,12 @@ import Footer from './Footer/Footer.tsx'
 import Resultados6k from './TripleCorona/Campeonato/Resultados_6k.tsx'
 import Resultados12k from './TripleCorona/Campeonato/Resultados12k.tsx'
 import Resultados21k from './TripleCorona/Campeonato/Resultados21k.tsx'
+import ScrollToTop from './ScrollToTop.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <main className="flex min-h-screen flex-col bg-black">
         <Header />
         <Routes>
