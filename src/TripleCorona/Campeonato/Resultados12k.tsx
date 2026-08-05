@@ -102,6 +102,14 @@ function Resultados12k() {
 
   const debeResaltarCoincidencia = cantidadCoincidenciasNombre === 1
 
+  const personaEncontrada = useMemo(() => {
+    if (!debeResaltarCoincidencia) {
+      return null
+    }
+
+    return resultadosFiltrados.find((fila) => coincideNombreBuscado(fila.nombre)) ?? null
+  }, [debeResaltarCoincidencia, resultadosFiltrados, coincideNombreBuscado])
+
   useEffect(() => {
     setPaginaActual(1)
   }, [filtroNombre, filtroGenero, filtroCategoria])
@@ -181,6 +189,26 @@ function Resultados12k() {
           </select>
         </label>
       </div>
+
+      {personaEncontrada && (
+        <div className="mb-5 rounded-xl border border-lime-300 bg-lime-100/70 p-4">
+          <p className="text-sm font-semibold uppercase tracking-widest text-lime-800">{personaEncontrada.nombre}</p>
+          <div className="mt-2 grid grid-cols-1 gap-2 text-sm text-neutral-800 sm:grid-cols-3">
+            <p>
+              <span className="font-semibold">Género:</span> {formatearGenero(personaEncontrada.genero)}
+            </p>
+            <p>
+              <span className="font-semibold">Categoría:</span> {formatearCategoria(personaEncontrada.categoria)}
+            </p>
+            <p>
+              <span className="font-semibold">Posición categoría:</span> {personaEncontrada.posCat}
+            </p>
+            <p>
+              <span className="font-semibold">Puntaje:</span> {personaEncontrada.total}
+            </p>
+          </div>
+        </div>
+      )}
 
       <div className="overflow-x-auto rounded-xl border border-lime-100">
         <table className="min-w-full border-collapse text-sm">
