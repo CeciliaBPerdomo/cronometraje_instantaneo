@@ -1,3 +1,5 @@
+import myAvatar from "../assets/myAvatar.png"
+
 function Footer() {
   return (
     <footer className="mt-auto w-full bg-black py-4 text-lime-400">
@@ -15,7 +17,22 @@ function Footer() {
         <div className="flex items-center justify-center text-center"></div>
 
         <div className="text-left md:text-right">
-          <p className="text-xs sm:text-sm">Desarrollo web: Cecilia Perdomo</p>
+          <img
+            src={myAvatar}
+            alt="Avatar de Cecilia Perdomo"
+            className="mb-2 h-10 w-10 rounded-full object-cover ring-1 ring-lime-400/50 md:ml-auto"
+          />
+          <p className="text-xs sm:text-sm">
+            Desarrollo web:{" "}
+            <a
+              href="https://portfolio-cecilia.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-inherit no-underline"
+            >
+              Cecilia Perdomo
+            </a>
+          </p>
           <p className="mt-1 text-xs sm:text-sm">cecilia.perdomo@gmail.com</p>
         </div>
       </div>
