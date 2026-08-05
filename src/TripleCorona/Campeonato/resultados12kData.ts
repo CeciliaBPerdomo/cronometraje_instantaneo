@@ -17,8 +17,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 500,
     "fecha2": 490,
-    "fecha3": null,
-    "total": 990
+    "fecha3": 486,
+    "total": 1476
   },
   {
     "nombre": "Andres Rodríguez",
@@ -27,18 +27,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 492,
     "fecha2": 496,
-    "fecha3": null,
-    "total": 988
+    "fecha3": 488,
+    "total": 1476
   },
   {
-    "nombre": "Catriel Batista",
+    "nombre": "Facundo Chocho",
     "genero": "M",
     "categoria": "1M | 30-39",
     "posCat": 2,
-    "fecha1": 490,
-    "fecha2": 488,
-    "fecha3": null,
-    "total": 978
+    "fecha1": 478,
+    "fecha2": 492,
+    "fecha3": 492,
+    "total": 1462
   },
   {
     "nombre": "Gabriel Gómez",
@@ -47,48 +47,28 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 3,
     "fecha1": 486,
     "fecha2": 484,
-    "fecha3": null,
-    "total": 970
-  },
-  {
-    "nombre": "Facundo Chocho",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 4,
-    "fecha1": 478,
-    "fecha2": 492,
-    "fecha3": null,
-    "total": 970
-  },
-  {
-    "nombre": "Ruben Rodriguez",
-    "genero": "M",
-    "categoria": "1M | 60-99",
-    "posCat": 1,
-    "fecha1": 482,
-    "fecha2": 478,
-    "fecha3": null,
-    "total": 960
-  },
-  {
-    "nombre": "Sebastián Mourglia Rostán",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 2,
-    "fecha1": 474,
-    "fecha2": 486,
-    "fecha3": null,
-    "total": 960
+    "fecha3": 478,
+    "total": 1448
   },
   {
     "nombre": "Enzo Fernandez",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 3,
+    "posCat": 2,
     "fecha1": 488,
     "fecha2": 470,
-    "fecha3": null,
-    "total": 958
+    "fecha3": 484,
+    "total": 1442
+  },
+  {
+    "nombre": "Sebastián Mourglia Rostán",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 3,
+    "fecha1": 474,
+    "fecha2": 486,
+    "fecha3": 482,
+    "total": 1442
   },
   {
     "nombre": "Eduardo Brioso",
@@ -97,8 +77,28 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 4,
     "fecha1": 468,
     "fecha2": 482,
-    "fecha3": null,
-    "total": 950
+    "fecha3": 472,
+    "total": 1422
+  },
+  {
+    "nombre": "Amilcar Oyarzo",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 4,
+    "fecha1": 472,
+    "fecha2": 472,
+    "fecha3": 474,
+    "total": 1418
+  },
+  {
+    "nombre": "Ruben Rodriguez",
+    "genero": "M",
+    "categoria": "1M | 60-99",
+    "posCat": 1,
+    "fecha1": 482,
+    "fecha2": 478,
+    "fecha3": 456,
+    "total": 1416
   },
   {
     "nombre": "Mauricio Martinez",
@@ -107,48 +107,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 480,
     "fecha2": 466,
-    "fecha3": null,
-    "total": 946
-  },
-  {
-    "nombre": "Amilcar Oyarzo",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 5,
-    "fecha1": 472,
-    "fecha2": 472,
-    "fecha3": null,
-    "total": 944
-  },
-  {
-    "nombre": "Gonzalo Musselli",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 6,
-    "fecha1": 456,
-    "fecha2": 480,
-    "fecha3": null,
-    "total": 936
-  },
-  {
-    "nombre": "Nicolas Dreyer",
-    "genero": "M",
-    "categoria": "1M | 20-29",
-    "posCat": 2,
-    "fecha1": 476,
-    "fecha2": 456,
-    "fecha3": null,
-    "total": 932
-  },
-  {
-    "nombre": "Federico Pinazzo",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 5,
-    "fecha1": 464,
-    "fecha2": 460,
-    "fecha3": null,
-    "total": 924
+    "fecha3": 442,
+    "total": 1388
   },
   {
     "nombre": "Cesar Muniz",
@@ -157,8 +117,48 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 452,
     "fecha2": 468,
-    "fecha3": null,
-    "total": 920
+    "fecha3": 466,
+    "total": 1386
+  },
+  {
+    "nombre": "Nicolas Dreyer",
+    "genero": "M",
+    "categoria": "1M | 20-29",
+    "posCat": 2,
+    "fecha1": 476,
+    "fecha2": 456,
+    "fecha3": 450,
+    "total": 1382
+  },
+  {
+    "nombre": "Gonzalo Musselli",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 5,
+    "fecha1": 456,
+    "fecha2": 480,
+    "fecha3": 440,
+    "total": 1376
+  },
+  {
+    "nombre": "Enzo Bruno Lopez",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 6,
+    "fecha1": 450,
+    "fecha2": 458,
+    "fecha3": 468,
+    "total": 1376
+  },
+  {
+    "nombre": "Federico Pinazzo",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 5,
+    "fecha1": 464,
+    "fecha2": 460,
+    "fecha3": 446,
+    "total": 1370
   },
   {
     "nombre": "Sebastián Laclau",
@@ -167,28 +167,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 6,
     "fecha1": 466,
     "fecha2": 446,
-    "fecha3": null,
-    "total": 912
+    "fecha3": 454,
+    "total": 1366
   },
   {
-    "nombre": "Enzo Bruno Lopez",
+    "nombre": "Juan Manuel Luzardo",
     "genero": "M",
     "categoria": "1M | 30-39",
     "posCat": 7,
-    "fecha1": 450,
-    "fecha2": 458,
-    "fecha3": null,
-    "total": 908
-  },
-  {
-    "nombre": "Santiago Vidal",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 8,
-    "fecha1": 434,
-    "fecha2": 474,
-    "fecha3": null,
-    "total": 908
+    "fecha1": 454,
+    "fecha2": 440,
+    "fecha3": 448,
+    "total": 1342
   },
   {
     "nombre": "Miguel Alberro",
@@ -197,8 +187,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 2,
     "fecha1": 462,
     "fecha2": 436,
-    "fecha3": null,
-    "total": 898
+    "fecha3": 434,
+    "total": 1332
   },
   {
     "nombre": "Sergio Paullier",
@@ -207,38 +197,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 7,
     "fecha1": 446,
     "fecha2": 452,
-    "fecha3": null,
-    "total": 898
-  },
-  {
-    "nombre": "Juan Manuel Luzardo",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 9,
-    "fecha1": 454,
-    "fecha2": 440,
-    "fecha3": null,
-    "total": 894
-  },
-  {
-    "nombre": "Evelyn Devotto",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 1,
-    "fecha1": 422,
-    "fecha2": 450,
-    "fecha3": null,
-    "total": 872
-  },
-  {
-    "nombre": "Miguel Huk",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 10,
-    "fecha1": 438,
-    "fecha2": 432,
-    "fecha3": null,
-    "total": 870
+    "fecha3": 430,
+    "total": 1328
   },
   {
     "nombre": "Nicolas Pedreira",
@@ -247,18 +207,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 8,
     "fecha1": 420,
     "fecha2": 448,
-    "fecha3": null,
-    "total": 868
+    "fecha3": 444,
+    "total": 1312
   },
   {
     "nombre": "Rolo Guerrero",
     "genero": "M",
     "categoria": "1M | 30-39",
-    "posCat": 11,
+    "posCat": 8,
     "fecha1": 432,
     "fecha2": 434,
-    "fecha3": null,
-    "total": 866
+    "fecha3": 424,
+    "total": 1290
   },
   {
     "nombre": "Jose Melia",
@@ -267,48 +227,28 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 3,
     "fecha1": 408,
     "fecha2": 454,
-    "fecha3": null,
-    "total": 862
+    "fecha3": 426,
+    "total": 1288
   },
   {
-    "nombre": "Jorge Ibañez",
+    "nombre": "Miguel Huk",
     "genero": "M",
-    "categoria": "1M | 40-49",
+    "categoria": "1M | 30-39",
     "posCat": 9,
-    "fecha1": 430,
-    "fecha2": 430,
-    "fecha3": null,
-    "total": 860
+    "fecha1": 438,
+    "fecha2": 432,
+    "fecha3": 412,
+    "total": 1282
   },
   {
-    "nombre": "Carol Ferreira",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 1,
-    "fecha1": 416,
-    "fecha2": 438,
-    "fecha3": null,
-    "total": 854
-  },
-  {
-    "nombre": "Yino Carro",
+    "nombre": "Santiago Vidal",
     "genero": "M",
-    "categoria": "1M | 40-49",
+    "categoria": "1M | 30-39",
     "posCat": 10,
-    "fecha1": 428,
-    "fecha2": 424,
-    "fecha3": null,
-    "total": 852
-  },
-  {
-    "nombre": "Estela Cabrera",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 2,
-    "fecha1": 426,
-    "fecha2": 426,
-    "fecha3": null,
-    "total": 852
+    "fecha1": 434,
+    "fecha2": 474,
+    "fecha3": 368,
+    "total": 1276
   },
   {
     "nombre": "Stephanie Rostagnol",
@@ -317,58 +257,48 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 418,
     "fecha2": 428,
-    "fecha3": null,
-    "total": 846
+    "fecha3": 428,
+    "total": 1274
   },
   {
-    "nombre": "Osvaldo Ernesto Caraballo Rodriguez",
-    "genero": "M",
-    "categoria": "1M | 60-99",
-    "posCat": 4,
-    "fecha1": 424,
-    "fecha2": 414,
-    "fecha3": null,
-    "total": 838
+    "nombre": "Carol Ferreira",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 1,
+    "fecha1": 416,
+    "fecha2": 438,
+    "fecha3": 418,
+    "total": 1272
   },
   {
-    "nombre": "José Andrés López Nan",
+    "nombre": "Yino Carro",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 11,
-    "fecha1": 440,
-    "fecha2": 396,
-    "fecha3": null,
-    "total": 836
+    "posCat": 9,
+    "fecha1": 428,
+    "fecha2": 424,
+    "fecha3": 420,
+    "total": 1272
   },
   {
-    "nombre": "Javier Perdomo Barolin",
+    "nombre": "Jorge Ibañez",
     "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 12,
-    "fecha1": 384,
-    "fecha2": 442,
-    "fecha3": null,
-    "total": 826
+    "categoria": "1M | 40-49",
+    "posCat": 10,
+    "fecha1": 430,
+    "fecha2": 430,
+    "fecha3": 390,
+    "total": 1250
   },
   {
-    "nombre": "Janet Nuñez",
+    "nombre": "Evelyn Devotto",
     "genero": "F",
-    "categoria": "1F | 50-59",
+    "categoria": "1F | 30-39",
     "posCat": 1,
-    "fecha1": 400,
-    "fecha2": 418,
-    "fecha3": null,
-    "total": 818
-  },
-  {
-    "nombre": "Leopoldo Baridon",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 13,
-    "fecha1": 412,
-    "fecha2": 402,
-    "fecha3": null,
-    "total": 814
+    "fecha1": 422,
+    "fecha2": 450,
+    "fecha3": 350,
+    "total": 1222
   },
   {
     "nombre": "Magela Izaguirre",
@@ -377,8 +307,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 2,
     "fecha1": 402,
     "fecha2": 406,
-    "fecha3": null,
-    "total": 808
+    "fecha3": 414,
+    "total": 1222
+  },
+  {
+    "nombre": "Janet Nuñez",
+    "genero": "F",
+    "categoria": "1F | 50-59",
+    "posCat": 1,
+    "fecha1": 400,
+    "fecha2": 418,
+    "fecha3": 400,
+    "total": 1218
   },
   {
     "nombre": "Fabiana Devotto",
@@ -387,28 +327,68 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 3,
     "fecha1": 398,
     "fecha2": 408,
-    "fecha3": null,
-    "total": 806
+    "fecha3": 408,
+    "total": 1214
+  },
+  {
+    "nombre": "Javier Perdomo Barolin",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 11,
+    "fecha1": 384,
+    "fecha2": 442,
+    "fecha3": 384,
+    "total": 1210
+  },
+  {
+    "nombre": "José Andrés López Nan",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 11,
+    "fecha1": 440,
+    "fecha2": 396,
+    "fecha3": 366,
+    "total": 1202
   },
   {
     "nombre": "Ana Cabrera",
     "genero": "F",
     "categoria": "1F | 40-49",
-    "posCat": 3,
+    "posCat": 2,
     "fecha1": 394,
     "fecha2": 410,
-    "fecha3": null,
-    "total": 804
+    "fecha3": 398,
+    "total": 1202
   },
   {
-    "nombre": "Jonathan Robinson",
+    "nombre": "Osvaldo Ernesto Caraballo Rodriguez",
+    "genero": "M",
+    "categoria": "1M | 60-99",
+    "posCat": 4,
+    "fecha1": 424,
+    "fecha2": 414,
+    "fecha3": 362,
+    "total": 1200
+  },
+  {
+    "nombre": "Leopoldo Baridon",
     "genero": "M",
     "categoria": "1M | 30-39",
-    "posCat": 14,
-    "fecha1": 396,
-    "fecha2": 404,
-    "fecha3": null,
-    "total": 800
+    "posCat": 12,
+    "fecha1": 412,
+    "fecha2": 402,
+    "fecha3": 382,
+    "total": 1196
+  },
+  {
+    "nombre": "Estela Cabrera",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 3,
+    "fecha1": 426,
+    "fecha2": 426,
+    "fecha3": 340,
+    "total": 1192
   },
   {
     "nombre": "Marcelo Jorge",
@@ -417,8 +397,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 2,
     "fecha1": 388,
     "fecha2": 412,
-    "fecha3": null,
-    "total": 800
+    "fecha3": 386,
+    "total": 1186
   },
   {
     "nombre": "Olga Lopez",
@@ -427,48 +407,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 4,
     "fecha1": 386,
     "fecha2": 394,
-    "fecha3": null,
-    "total": 780
+    "fecha3": 376,
+    "total": 1156
   },
   {
-    "nombre": "Hugo Hecheverria",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 12,
-    "fecha1": 382,
-    "fecha2": 386,
-    "fecha3": null,
-    "total": 768
-  },
-  {
-    "nombre": "Guillermo Reccioppe",
+    "nombre": "Jonathan Robinson",
     "genero": "M",
     "categoria": "1M | 30-39",
-    "posCat": 15,
-    "fecha1": 380,
-    "fecha2": 374,
-    "fecha3": null,
-    "total": 754
-  },
-  {
-    "nombre": "Eduardo Gutierrez",
-    "genero": "M",
-    "categoria": "1M | 40-49",
     "posCat": 13,
-    "fecha1": 360,
-    "fecha2": 390,
-    "fecha3": null,
-    "total": 750
-  },
-  {
-    "nombre": "Darío Musselli",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 14,
-    "fecha1": 370,
-    "fecha2": 378,
-    "fecha3": null,
-    "total": 748
+    "fecha1": 396,
+    "fecha2": 404,
+    "fecha3": 342,
+    "total": 1142
   },
   {
     "nombre": "Cristina Umpierrez",
@@ -477,28 +427,28 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 5,
     "fecha1": 374,
     "fecha2": 372,
-    "fecha3": null,
-    "total": 746
+    "fecha3": 354,
+    "total": 1100
   },
   {
-    "nombre": "Henry Mayer",
+    "nombre": "Darío Musselli",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 15,
-    "fecha1": 356,
-    "fecha2": 388,
-    "fecha3": null,
-    "total": 744
+    "posCat": 12,
+    "fecha1": 370,
+    "fecha2": 378,
+    "fecha3": 348,
+    "total": 1096
   },
   {
-    "nombre": "Natalia Airaldo",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 6,
-    "fecha1": 358,
-    "fecha2": 384,
-    "fecha3": null,
-    "total": 742
+    "nombre": "Eduardo Gutierrez",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 13,
+    "fecha1": 360,
+    "fecha2": 390,
+    "fecha3": 336,
+    "total": 1086
   },
   {
     "nombre": "Patricia Lemos",
@@ -507,8 +457,28 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 2,
     "fecha1": 372,
     "fecha2": 368,
-    "fecha3": null,
-    "total": 740
+    "fecha3": 344,
+    "total": 1084
+  },
+  {
+    "nombre": "Analía Diaz",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 6,
+    "fecha1": 312,
+    "fecha2": 398,
+    "fecha3": 372,
+    "total": 1082
+  },
+  {
+    "nombre": "Guillermo Reccioppe",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 14,
+    "fecha1": 380,
+    "fecha2": 374,
+    "fecha3": 320,
+    "total": 1074
   },
   {
     "nombre": "Karen Ibañez",
@@ -517,18 +487,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 7,
     "fecha1": 368,
     "fecha2": 370,
-    "fecha3": null,
-    "total": 738
-  },
-  {
-    "nombre": "Alejandra Osés Badín",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 2,
-    "fecha1": 348,
-    "fecha2": 382,
-    "fecha3": null,
-    "total": 730
+    "fecha3": 330,
+    "total": 1068
   },
   {
     "nombre": "Vanessa González",
@@ -537,138 +497,148 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 8,
     "fecha1": 346,
     "fecha2": 366,
-    "fecha3": null,
-    "total": 712
-  },
-  {
-    "nombre": "Analía Diaz",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 9,
-    "fecha1": 312,
-    "fecha2": 398,
-    "fecha3": null,
-    "total": 710
-  },
-  {
-    "nombre": "Leonardo Colman",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 16,
-    "fecha1": 354,
-    "fecha2": 352,
-    "fecha3": null,
-    "total": 706
-  },
-  {
-    "nombre": "Cristina De Los Reyes",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 3,
-    "fecha1": 362,
-    "fecha2": 338,
-    "fecha3": null,
-    "total": 700
+    "fecha3": 356,
+    "total": 1068
   },
   {
     "nombre": "Veronica Bentancourt",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 4,
+    "posCat": 2,
     "fecha1": 350,
     "fecha2": 350,
-    "fecha3": null,
-    "total": 700
-  },
-  {
-    "nombre": "Yessi Pozzolo",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 5,
-    "fecha1": 340,
-    "fecha2": 360,
-    "fecha3": null,
-    "total": 700
+    "fecha3": 326,
+    "total": 1026
   },
   {
     "nombre": "Schurman Gonzalez",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 17,
+    "posCat": 14,
     "fecha1": 332,
     "fecha2": 362,
-    "fecha3": null,
-    "total": 694
+    "fecha3": 332,
+    "total": 1026
   },
   {
-    "nombre": "Gisel Planchon",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 10,
-    "fecha1": 352,
-    "fecha2": 336,
-    "fecha3": null,
-    "total": 688
-  },
-  {
-    "nombre": "Leticia Cáceres",
+    "nombre": "Yessi Pozzolo",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 6,
-    "fecha1": 344,
-    "fecha2": 332,
-    "fecha3": null,
-    "total": 676
+    "posCat": 3,
+    "fecha1": 340,
+    "fecha2": 360,
+    "fecha3": 314,
+    "total": 1014
+  },
+  {
+    "nombre": "Leonardo Colman",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 15,
+    "fecha1": 354,
+    "fecha2": 352,
+    "fecha3": 300,
+    "total": 1006
   },
   {
     "nombre": "Elena Bentancourt",
     "genero": "F",
     "categoria": "1F | 40-49",
-    "posCat": 11,
+    "posCat": 9,
     "fecha1": 334,
     "fecha2": 340,
-    "fecha3": null,
-    "total": 674
+    "fecha3": 328,
+    "total": 1002
   },
   {
-    "nombre": "Mariela Buffa",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 12,
-    "fecha1": 328,
-    "fecha2": 330,
-    "fecha3": null,
-    "total": 658
-  },
-  {
-    "nombre": "Paola Romero",
-    "genero": "F",
-    "categoria": "1F | 40-49",
-    "posCat": 13,
-    "fecha1": 320,
-    "fecha2": 324,
-    "fecha3": null,
-    "total": 644
-  },
-  {
-    "nombre": "Ernesto Jesus Batto",
+    "nombre": "Fabian Cabrera",
     "genero": "M",
-    "categoria": "1M | 60-99",
-    "posCat": 5,
-    "fecha1": 318,
-    "fecha2": 314,
+    "categoria": "1M | 20-29",
+    "posCat": 3,
+    "fecha1": 500,
+    "fecha2": 500,
     "fecha3": null,
-    "total": 632
+    "total": 1000
   },
   {
-    "nombre": "Luciano Graneri",
+    "nombre": "Sergio Andrés Pereira González",
+    "genero": "M",
+    "categoria": "1M | 20-29",
+    "posCat": 4,
+    "fecha1": 498,
+    "fecha2": 494,
+    "fecha3": null,
+    "total": 992
+  },
+  {
+    "nombre": "Javier Astraldi",
+    "genero": "M",
+    "categoria": "1M | 50-59",
+    "posCat": 3,
+    "fecha1": 498,
+    "fecha2": 490,
+    "fecha3": null,
+    "total": 988
+  },
+  {
+    "nombre": "Natalia Airaldo",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 10,
+    "fecha1": 358,
+    "fecha2": 384,
+    "fecha3": 244,
+    "total": 986
+  },
+  {
+    "nombre": "Catriel Batista",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 15,
+    "fecha1": 490,
+    "fecha2": 488,
+    "fecha3": null,
+    "total": 978
+  },
+  {
+    "nombre": "Gisel Planchon",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 11,
+    "fecha1": 352,
+    "fecha2": 336,
+    "fecha3": 290,
+    "total": 978
+  },
+  {
+    "nombre": "Federico Demoro",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 16,
+    "fecha1": 494,
+    "fecha2": 470,
+    "fecha3": null,
+    "total": 964
+  },
+  {
+    "nombre": "Yamandu Guigou",
+    "genero": "M",
+    "categoria": "1M | 50-59",
+    "posCat": 4,
+    "fecha1": 266,
+    "fecha2": 354,
+    "fecha3": 338,
+    "total": 958
+  },
+  {
+    "nombre": "Martín Fuica",
     "genero": "M",
     "categoria": "1M | 30-39",
     "posCat": 16,
-    "fecha1": 304,
-    "fecha2": 326,
+    "fecha1": 476,
+    "fecha2": 476,
     "fecha3": null,
-    "total": 630
+    "total": 952
   },
   {
     "nombre": "Emmanuel Martínez",
@@ -677,28 +647,78 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 17,
     "fecha1": 322,
     "fecha2": 302,
-    "fecha3": null,
-    "total": 624
+    "fecha3": 308,
+    "total": 932
   },
   {
-    "nombre": "Yamandu Guigou",
+    "nombre": "German Franco",
     "genero": "M",
-    "categoria": "1M | 50-59",
-    "posCat": 3,
-    "fecha1": 266,
-    "fecha2": 354,
+    "categoria": "1M | 30-39",
+    "posCat": 18,
+    "fecha1": 464,
+    "fecha2": 464,
     "fecha3": null,
-    "total": 620
+    "total": 928
   },
   {
-    "nombre": "Paloma Sánchez",
+    "nombre": "Mariela Buffa",
     "genero": "F",
-    "categoria": "1F | 20-29",
-    "posCat": 4,
-    "fecha1": 290,
-    "fecha2": 328,
+    "categoria": "1F | 40-49",
+    "posCat": 12,
+    "fecha1": 328,
+    "fecha2": 330,
+    "fecha3": 266,
+    "total": 924
+  },
+  {
+    "nombre": "Paola Romero",
+    "genero": "F",
+    "categoria": "1F | 40-49",
+    "posCat": 13,
+    "fecha1": 320,
+    "fecha2": 324,
+    "fecha3": 258,
+    "total": 902
+  },
+  {
+    "nombre": "Ernesto Jesus Batto",
+    "genero": "M",
+    "categoria": "1M | 60-99",
+    "posCat": 5,
+    "fecha1": 318,
+    "fecha2": 314,
+    "fecha3": 270,
+    "total": 902
+  },
+  {
+    "nombre": "Patricio Garcia",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 19,
+    "fecha1": 462,
+    "fecha2": 436,
     "fecha3": null,
-    "total": 618
+    "total": 898
+  },
+  {
+    "nombre": "Luciano Graneri",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 20,
+    "fecha1": 304,
+    "fecha2": 326,
+    "fecha3": 262,
+    "total": 892
+  },
+  {
+    "nombre": "Natalie Guigou",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 4,
+    "fecha1": 298,
+    "fecha2": 318,
+    "fecha3": 274,
+    "total": 890
   },
   {
     "nombre": "Yanina Velazquez Garnier",
@@ -707,38 +727,48 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 14,
     "fecha1": 296,
     "fecha2": 320,
-    "fecha3": null,
-    "total": 616
-  },
-  {
-    "nombre": "Natalie Guigou",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 7,
-    "fecha1": 298,
-    "fecha2": 318,
-    "fecha3": null,
-    "total": 616
+    "fecha3": 272,
+    "total": 888
   },
   {
     "nombre": "Margarita Morales",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 8,
+    "posCat": 5,
     "fecha1": 300,
     "fecha2": 316,
-    "fecha3": null,
-    "total": 616
+    "fecha3": 256,
+    "total": 872
+  },
+  {
+    "nombre": "Paloma Sánchez",
+    "genero": "F",
+    "categoria": "1F | 20-29",
+    "posCat": 4,
+    "fecha1": 290,
+    "fecha2": 328,
+    "fecha3": 252,
+    "total": 870
   },
   {
     "nombre": "Marcelo Díaz Buschiazzo",
     "genero": "M",
     "categoria": "1M | 50-59",
-    "posCat": 4,
+    "posCat": 5,
     "fecha1": 292,
     "fecha2": 308,
-    "fecha3": null,
-    "total": 600
+    "fecha3": 248,
+    "total": 848
+  },
+  {
+    "nombre": "Guillermo Fiorelli",
+    "genero": "M",
+    "categoria": "1M | 30-39",
+    "posCat": 21,
+    "fecha1": 282,
+    "fecha2": 312,
+    "fecha3": 254,
+    "total": 848
   },
   {
     "nombre": "Luciana Diaz",
@@ -747,28 +777,18 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 1,
     "fecha1": 294,
     "fecha2": 306,
-    "fecha3": null,
-    "total": 600
-  },
-  {
-    "nombre": "Guillermo Fiorelli",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 18,
-    "fecha1": 282,
-    "fecha2": 312,
-    "fecha3": null,
-    "total": 594
+    "fecha3": 246,
+    "total": 846
   },
   {
     "nombre": "Luciana Ricca",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 9,
+    "posCat": 6,
     "fecha1": 276,
     "fecha2": 310,
-    "fecha3": null,
-    "total": 586
+    "fecha3": 250,
+    "total": 836
   },
   {
     "nombre": "Maria Cecilia Usuca",
@@ -777,18 +797,8 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 15,
     "fecha1": 280,
     "fecha2": 300,
-    "fecha3": null,
-    "total": 580
-  },
-  {
-    "nombre": "Natalia González",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 10,
-    "fecha1": 274,
-    "fecha2": 304,
-    "fecha3": null,
-    "total": 578
+    "fecha3": 238,
+    "total": 818
   },
   {
     "nombre": "Fernanda Usuca",
@@ -797,8 +807,118 @@ export const resultados12k: Resultado12k[] = [
     "posCat": 3,
     "fecha1": 278,
     "fecha2": 298,
+    "fecha3": 240,
+    "total": 816
+  },
+  {
+    "nombre": "Hugo Hecheverria",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 17,
+    "fecha1": 382,
+    "fecha2": 386,
     "fecha3": null,
-    "total": 576
+    "total": 768
+  },
+  {
+    "nombre": "Augustina Puppo",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 7,
+    "fecha1": 356,
+    "fecha2": 406,
+    "fecha3": null,
+    "total": 762
+  },
+  {
+    "nombre": "Henry Mayer",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 18,
+    "fecha1": 356,
+    "fecha2": 388,
+    "fecha3": null,
+    "total": 744
+  },
+  {
+    "nombre": "German Rodriguez",
+    "genero": "M",
+    "categoria": "1M | 40-49",
+    "posCat": 19,
+    "fecha1": 376,
+    "fecha2": 360,
+    "fecha3": null,
+    "total": 736
+  },
+  {
+    "nombre": "Alejandra Osés Badín",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 8,
+    "fecha1": 348,
+    "fecha2": 382,
+    "fecha3": null,
+    "total": 730
+  },
+  {
+    "nombre": "Ricardo Irigoyen",
+    "genero": "M",
+    "categoria": "1M | 20-29",
+    "posCat": 5,
+    "fecha1": 364,
+    "fecha2": 358,
+    "fecha3": null,
+    "total": 722
+  },
+  {
+    "nombre": "Cristina De Los Reyes",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 9,
+    "fecha1": 362,
+    "fecha2": 338,
+    "fecha3": null,
+    "total": 700
+  },
+  {
+    "nombre": "Leticia Cáceres",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 10,
+    "fecha1": 344,
+    "fecha2": 332,
+    "fecha3": null,
+    "total": 676
+  },
+  {
+    "nombre": "Valeria Aguilar",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 11,
+    "fecha1": 348,
+    "fecha2": 324,
+    "fecha3": null,
+    "total": 672
+  },
+  {
+    "nombre": "Giovana Diaz",
+    "genero": "F",
+    "categoria": "1F | 50-59",
+    "posCat": 4,
+    "fecha1": 330,
+    "fecha2": 296,
+    "fecha3": null,
+    "total": 626
+  },
+  {
+    "nombre": "Natalia González",
+    "genero": "F",
+    "categoria": "1F | 30-39",
+    "posCat": 12,
+    "fecha1": 274,
+    "fecha2": 304,
+    "fecha3": null,
+    "total": 578
   },
   {
     "nombre": "Veronica Muniz",
@@ -814,7 +934,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Mónica Muniz",
     "genero": "F",
     "categoria": "1F | 50-59",
-    "posCat": 4,
+    "posCat": 5,
     "fecha1": 260,
     "fecha2": 294,
     "fecha3": null,
@@ -824,7 +944,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Claudia Poledo",
     "genero": "F",
     "categoria": "1F | 50-59",
-    "posCat": 5,
+    "posCat": 6,
     "fecha1": 256,
     "fecha2": 292,
     "fecha3": null,
@@ -834,67 +954,27 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Marcelo Lauriano",
     "genero": "M",
     "categoria": "1M | 50-59",
-    "posCat": 5,
+    "posCat": 6,
     "fecha1": 258,
     "fecha2": 290,
     "fecha3": null,
     "total": 548
   },
   {
-    "nombre": "Fabian Cabrera",
-    "genero": "M",
-    "categoria": "1M | 20-29",
-    "posCat": 3,
-    "fecha1": 500,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 500
-  },
-  {
-    "nombre": "Javier Astraldi",
-    "genero": "M",
-    "categoria": "1M | 50-59",
-    "posCat": 6,
-    "fecha1": 498,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 498
-  },
-  {
-    "nombre": "Sergio Andrés Pereira González",
-    "genero": "M",
-    "categoria": "1M | 20-29",
-    "posCat": 4,
-    "fecha1": 498,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 498
-  },
-  {
     "nombre": "Ivan Nuñez",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 18,
+    "posCat": 20,
     "fecha1": 496,
     "fecha2": null,
     "fecha3": null,
     "total": 496
   },
   {
-    "nombre": "Federico Demoro",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 19,
-    "fecha1": 494,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 494
-  },
-  {
     "nombre": "Alexandro Ayala",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 20,
+    "posCat": 21,
     "fecha1": 494,
     "fecha2": null,
     "fecha3": null,
@@ -904,51 +984,21 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Nicolás Ruppel",
     "genero": "M",
     "categoria": "1M | 30-39",
-    "posCat": 19,
+    "posCat": 22,
     "fecha1": 484,
     "fecha2": null,
     "fecha3": null,
     "total": 484
   },
   {
-    "nombre": "Martín Fuica",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 20,
-    "fecha1": 476,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 476
-  },
-  {
     "nombre": "Pablo Varela",
     "genero": "M",
     "categoria": "1M | 30-39",
-    "posCat": 21,
+    "posCat": 23,
     "fecha1": 470,
     "fecha2": null,
     "fecha3": null,
     "total": 470
-  },
-  {
-    "nombre": "German Franco",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 22,
-    "fecha1": 464,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 464
-  },
-  {
-    "nombre": "Patricio Garcia",
-    "genero": "M",
-    "categoria": "1M | 30-39",
-    "posCat": 23,
-    "fecha1": 462,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 462
   },
   {
     "nombre": "Osnildo Olivera",
@@ -974,7 +1024,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Hernán Viola",
     "genero": "M",
     "categoria": "1M | 20-29",
-    "posCat": 5,
+    "posCat": 6,
     "fecha1": 448,
     "fecha2": null,
     "fecha3": null,
@@ -1064,7 +1114,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Ivan Alvez",
     "genero": "M",
     "categoria": "1M | 20-29",
-    "posCat": 6,
+    "posCat": 7,
     "fecha1": 410,
     "fecha2": null,
     "fecha3": null,
@@ -1084,7 +1134,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Sofia Henderson",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 11,
+    "posCat": 13,
     "fecha1": 404,
     "fecha2": null,
     "fecha3": null,
@@ -1094,7 +1144,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Jimmy Robatto",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 21,
+    "posCat": 22,
     "fecha1": 400,
     "fecha2": null,
     "fecha3": null,
@@ -1104,7 +1154,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Rubén Morales",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 22,
+    "posCat": 23,
     "fecha1": 392,
     "fecha2": null,
     "fecha3": null,
@@ -1114,7 +1164,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Dahianna Benitez",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 12,
+    "posCat": 14,
     "fecha1": 392,
     "fecha2": null,
     "fecha3": null,
@@ -1124,7 +1174,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Jorge Leon Morales Dominguez",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 23,
+    "posCat": 24,
     "fecha1": 390,
     "fecha2": null,
     "fecha3": null,
@@ -1134,7 +1184,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Guillermo Bonaudi",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 24,
+    "posCat": 25,
     "fecha1": 380,
     "fecha2": null,
     "fecha3": null,
@@ -1144,21 +1194,11 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Edgardo Rostagnol",
     "genero": "M",
     "categoria": "1M | 40-49",
-    "posCat": 25,
+    "posCat": 26,
     "fecha1": 378,
     "fecha2": null,
     "fecha3": null,
     "total": 378
-  },
-  {
-    "nombre": "German Rodriguez",
-    "genero": "M",
-    "categoria": "1M | 40-49",
-    "posCat": 26,
-    "fecha1": 376,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 376
   },
   {
     "nombre": "Ana Rabellino",
@@ -1184,17 +1224,7 @@ export const resultados12k: Resultado12k[] = [
     "nombre": "Deborath Arias",
     "genero": "F",
     "categoria": "1F | 30-39",
-    "posCat": 13,
-    "fecha1": 364,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 364
-  },
-  {
-    "nombre": "Ricardo Irigoyen",
-    "genero": "M",
-    "categoria": "1M | 20-29",
-    "posCat": 7,
+    "posCat": 15,
     "fecha1": 364,
     "fecha2": null,
     "fecha3": null,
@@ -1209,26 +1239,6 @@ export const resultados12k: Resultado12k[] = [
     "fecha2": null,
     "fecha3": null,
     "total": 358
-  },
-  {
-    "nombre": "Augustina Puppo",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 14,
-    "fecha1": 356,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 356
-  },
-  {
-    "nombre": "Valeria Aguilar",
-    "genero": "F",
-    "categoria": "1F | 30-39",
-    "posCat": 15,
-    "fecha1": 348,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 348
   },
   {
     "nombre": "Evelyn Whitaker",
@@ -1309,16 +1319,6 @@ export const resultados12k: Resultado12k[] = [
     "fecha2": null,
     "fecha3": null,
     "total": 334
-  },
-  {
-    "nombre": "Giovana Diaz",
-    "genero": "F",
-    "categoria": "1F | 50-59",
-    "posCat": 6,
-    "fecha1": 330,
-    "fecha2": null,
-    "fecha3": null,
-    "total": 330
   },
   {
     "nombre": "Fabricio Fernandez",

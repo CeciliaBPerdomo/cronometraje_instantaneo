@@ -101,7 +101,7 @@ function TripleCorona() {
         <h2 className="text-center text-2xl font-extrabold tracking-tight text-neutral-900">
           Clasificación Triple Corona 
         </h2>
-        <h3 className="text-center text-lg font-semibold text-neutral-700">Luego de la 2da fecha</h3>
+        <h3 className="text-center text-lg font-semibold text-neutral-700">Luego de la 3era fecha</h3>
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <Link
             to="/triple-corona/resultados-6k"

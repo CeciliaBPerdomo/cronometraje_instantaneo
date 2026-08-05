@@ -12,42 +12,44 @@ function ComboPage() {
 			</header>
 
 			<section className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-label="Etapas de Combo Colonia 10K">
-				<a
-					href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia"
-					target="_blank"
-					rel="noreferrer"
-					className="block rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl"
-				>
+				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Nueva Helvecia</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">1era Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">8 de agosto</h3>
-					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Nueva Helvecia</h1>
-					<p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-lime-700">
-						Inscripciones Abiertas
-					</p>
-				</a>
+					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
+						<a
+							href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia"
+							target="_blank"
+							rel="noreferrer"
+							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+						>
+							Inscripciones Abiertas
+						</a>
+					</div>
+				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Miguelete</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">2da Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">5 de setiembre</h3>
-					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Miguelete</h1>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Juan Lacaze</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">3era Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">3 de octubre</h3>
-					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Juan Lacaze</h1>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+					<h1 className="mt-1 text-2xl font-bold text-neutral-900" translate="no">Conchillas</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">4ta Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">7 de noviembre</h3>
-					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Conchillas</h1>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl sm:col-span-2 lg:col-span-1">
+					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Santa Ana</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">5ta Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">16 de enero</h3>
-					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Santa Ana</h1>
 				</article>
 			</section>
 		</div>
