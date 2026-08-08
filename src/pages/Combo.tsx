@@ -18,12 +18,12 @@ function ComboPage() {
 					<h3 className="text-xl font-semibold text-neutral-900">8 de agosto</h3>
 					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
 						<a
-							href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia"
+							href="https://cronometrajeinstantaneo.com/resultados/combo-10k-colonia/consulta"
 							target="_blank"
 							rel="noreferrer"
 							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
 						>
-							Inscripciones Abiertas
+							Resultados
 						</a>
 					</div>
 				</article>
