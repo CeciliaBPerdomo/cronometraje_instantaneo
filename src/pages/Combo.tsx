@@ -40,6 +40,16 @@ function ComboPage() {
 					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Miguelete</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">2da Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">5 de setiembre</h3>
+					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
+						<a
+							href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-2"
+							target="_blank"
+							rel="noreferrer"
+							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+						>
+							Inscripciones Abiertas
+						</a>
+					</div>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
