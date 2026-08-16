@@ -1,5 +1,5 @@
 import cacImage from '../assets/cac.png'
-import camperoImage from '../assets/campero.jpeg'
+import camperoImage from '../assets/campero2.jpg'
 import conociendoImage from '../assets/conociendo.jpg'
 import comboImage from '../assets/combo-colonia-10-k.jpg'
 import { Link } from 'react-router-dom'
