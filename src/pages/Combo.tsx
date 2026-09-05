@@ -16,14 +16,22 @@ function ComboPage() {
 					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Miguelete</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">2da Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">5 de setiembre</h3>
-					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em]">
+					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em] sm:grid-cols-2">
 						<a
-							href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-2"
+							href="https://cronometrajeinstantaneo.com/resultados/combo-10k-colonia-2/filtros"
 							target="_blank"
 							rel="noreferrer"
 							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
 						>
-							Inscripciones Abiertas
+							Resultados Generales
+						</a>
+						<a
+							href="https://cronometrajeinstantaneo.com/resultados/combo-10k-colonia-2/consulta"
+							target="_blank"
+							rel="noreferrer"
+							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+						>
+							Resultados Individuales
 						</a>
 					</div>
 				</article>
