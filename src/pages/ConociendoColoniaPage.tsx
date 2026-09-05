@@ -16,22 +16,22 @@ function ConociendoColoniaPage() {
           <h1 className="mt-1 text-2xl font-bold text-neutral-900">Miguelete</h1>
           <h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">1era Fecha</h6>
           <h3 className="text-xl font-semibold text-neutral-900">6 setiembre</h3>
-          <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-semibold uppercase tracking-[0.15em]">
-            <a
-              href="https://cronometrajeinstantaneo.com/inscripciones/conociendo-colonia-mtb-1"
-              target="_blank"
-              rel="noreferrer"
-              className="flex min-h-24 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-3 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
-            >
-              Inscripciones Abiertas
-            </a>
+          <div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.15em] sm:grid-cols-2">
             <a
               href="https://cronometrajeinstantaneo.com/resultados/conociendo-colonia-mtb-1/filtros?r=1"
               target="_blank"
               rel="noreferrer"
               className="flex min-h-24 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-3 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
             >
-              Resultados
+              Resultados Generales
+            </a>
+            <a
+              href="https://cronometrajeinstantaneo.com/resultados/conociendo-colonia-mtb-1/consulta"
+              target="_blank"
+              rel="noreferrer"
+              className="flex min-h-24 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-3 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+            >
+              Resultados Individuales
             </a>
           </div>
         </article>
@@ -40,12 +40,20 @@ function ConociendoColoniaPage() {
           <h1 className="mt-1 text-2xl font-bold text-neutral-900">Antolín</h1>
           <h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">2da fecha</h6>
           <h3 className="text-xl font-semibold text-neutral-900">27 de setiembre</h3>
+          <div className="mt-5 flex min-h-24 flex-col items-center justify-center gap-1 rounded-xl border border-lime-300 bg-lime-50 px-3 py-4 text-base font-semibold uppercase tracking-[0.15em] text-lime-800">
+            <span>Inscripciones Abiertas</span>
+            <span className="text-sm font-medium uppercase tracking-[0.15em] text-neutral-400">(Próximamente)</span>
+          </div>
         </article>
 
         <article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
           <h1 className="mt-1 text-2xl font-bold text-neutral-900">San Pedro</h1>
           <h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">3era fecha</h6>
           <h3 className="text-xl font-semibold text-neutral-900">18 de octubre</h3>
+          <div className="mt-5 flex min-h-24 flex-col items-center justify-center gap-1 rounded-xl border border-lime-300 bg-lime-50 px-3 py-4 text-base font-semibold uppercase tracking-[0.15em] text-lime-800">
+            <span>Inscripciones Abiertas</span>
+            <span className="text-sm font-medium uppercase tracking-[0.15em] text-neutral-400">(Próximamente)</span>
+          </div>
         </article>
       </section>
     </div>
