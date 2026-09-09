@@ -8,25 +8,6 @@ function General() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-6" aria-label="Galeria general">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <article className="border border-lime-400/50 bg-white p-5 text-center shadow-md sm:col-span-2 lg:col-span-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-lime-700">Combo Colonia</p>
-          <h1 className="mt-1 text-2xl font-extrabold text-neutral-900 sm:text-3xl">Resultados Campeonato Combo 26/27</h1>
-          <div className="mx-auto mt-4 grid max-w-md grid-cols-2 gap-3">
-            <Link
-              to="/combo/resultados-5k"
-              className="border border-lime-400 bg-lime-500 px-4 py-3 font-bold text-white transition-colors hover:bg-lime-600"
-            >
-              5K
-            </Link>
-            <Link
-              to="/combo/resultados-10k"
-              className="border border-neutral-800 bg-neutral-900 px-4 py-3 font-bold text-white transition-colors hover:bg-neutral-700"
-            >
-              10K
-            </Link>
-          </div>
-        </article>
-
         <Link
           to="/combo"
           aria-label="Ir a la pagina de Combo Colonia 10K"

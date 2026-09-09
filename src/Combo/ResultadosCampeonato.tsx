@@ -9,6 +9,7 @@ type Resultado = {
   genero: 'F' | 'M'
   edad: number
   categoria: string
+  puntaje: number
 }
 
 type ResultadosCampeonatoProps = {
@@ -20,13 +21,21 @@ const extraerResultados = (texto: string): Resultado[] => {
   const indiceEncabezado = texto.lastIndexOf('TOTAL')
   const textoResultados = indiceEncabezado === -1 ? texto : texto.slice(indiceEncabezado + 5)
   const expresionFila = /([A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ .'’-]*?)([FM])\s*(\d{2})\s*10\s*([FM])\s*\|\s*(\d{2}-\d{2})/g
+  const coincidencias = [...textoResultados.matchAll(expresionFila)]
 
-  return [...textoResultados.matchAll(expresionFila)].map((coincidencia) => ({
-    nombre: coincidencia[1].trim(),
-    genero: coincidencia[2] as 'F' | 'M',
-    edad: Number(coincidencia[3]),
-    categoria: `${coincidencia[4]} | ${coincidencia[5]}`,
-  }))
+  return coincidencias.map((coincidencia, indice) => {
+    const finalCategoria = (coincidencia.index ?? 0) + coincidencia[0].length
+    const inicioSiguienteFila = coincidencias[indice + 1]?.index ?? textoResultados.length
+    const valores = textoResultados.slice(finalCategoria, inicioSiguienteFila).replace(/\D/g, '')
+
+    return {
+      nombre: coincidencia[1].trim(),
+      genero: coincidencia[2] as 'F' | 'M',
+      edad: Number(coincidencia[3]),
+      categoria: `${coincidencia[4]} | ${coincidencia[5]}`,
+      puntaje: Number(valores.slice(-4)),
+    }
+  })
 }
 
 const normalizarTexto = (texto: string) =>
@@ -117,8 +126,8 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
           <>
             <div className="overflow-x-auto border border-lime-100">
               <table className="min-w-full text-sm">
-                <thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">#</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Edad</th><th className="px-3 py-2 text-center">Categoría</th></tr></thead>
-                <tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{indice + 1}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.edad}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td></tr>)}</tbody>
+                <thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">#</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Edad</th><th className="px-3 py-2 text-center">Categoría</th><th className="px-3 py-2 text-center">Puntaje</th></tr></thead>
+                <tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{indice + 1}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.edad}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td><td className="px-3 py-2 text-center font-semibold">{resultado.puntaje}</td></tr>)}</tbody>
               </table>
             </div>
             <p className="mt-3 text-center text-sm text-neutral-600">Mostrando {resultadosFiltrados.length} de {resultados.length} corredores.</p>
