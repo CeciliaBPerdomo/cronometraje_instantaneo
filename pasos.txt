@@ -1,4 +1,10 @@
+para actualizar cambios de otra persona, con la terminal abierta
+git pull origin master
+
+para abrir area de trabajo
 1. Terminal - new Terminal
+
+levantar la pagina para verla en internet local
 npm run dev
 Entrar a  http://localhost:5173/ desde el chrome
 

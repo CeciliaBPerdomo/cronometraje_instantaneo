@@ -13,6 +13,8 @@ import Resultados6k from './TripleCorona/Campeonato/Resultados_6k.tsx'
 import Resultados12k from './TripleCorona/Campeonato/Resultados12k.tsx'
 import Resultados21k from './TripleCorona/Campeonato/Resultados21k.tsx'
 import ScrollToTop from './ScrollToTop.tsx'
+import Resultados5k from './Combo/Resultados5k.tsx'
+import Resultados10k from './Combo/Resultados10k.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -26,6 +28,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/campero" element={<Campero />} />
           <Route path="/conociendo-colonia-mtb" element={<ConociendoColoniaPage />} />
           <Route path="/combo" element={<ComboPage />} />
+          <Route path="/combo/resultados-5k" element={<Resultados5k />} />
+          <Route path="/combo/resultados-10k" element={<Resultados10k />} />
           <Route path="/triple-corona/resultados-6k" element={<Resultados6k />} />
           <Route path="/triple-corona/resultados-12k" element={<Resultados12k />} />
           <Route path="/triple-corona/resultados-21k" element={<Resultados21k />} />
