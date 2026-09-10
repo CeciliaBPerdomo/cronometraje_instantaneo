@@ -1,10 +1,6 @@
-import { useState } from 'react'
-import Competitiva from '../Conociendo Colonia/Campeonato/Competitiva'
-import Participativa from '../Conociendo Colonia/Campeonato/participativa'
+import { Link } from 'react-router-dom'
 
 function ConociendoColoniaPage() {
-  const [modalidad, setModalidad] = useState<'Participativa' | 'Competitiva'>('Participativa')
-
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-6">
       <header className="mb-8 text-center">
@@ -16,6 +12,11 @@ function ConociendoColoniaPage() {
           3 fechas
         </h2>
       </header>
+
+      <Link to="/conociendo-colonia-mtb/resultados" className="mb-5 flex w-full flex-col items-center justify-center border border-lime-400 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+        <h1 className="text-2xl font-extrabold text-neutral-900">Resultados del campeonato</h1>
+        <span className="mt-3 border border-lime-500 bg-lime-500 px-5 py-2 text-sm font-bold uppercase tracking-wide text-white">Resultados</span>
+      </Link>
 
       <section className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-label="Fechas de Conociendo Colonia MTB">
         <article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
@@ -60,17 +61,6 @@ function ConociendoColoniaPage() {
         </article>
       </section>
 
-      <section className="mt-10 w-full" aria-labelledby="resultados-campeonato">
-        <div className="mb-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-lime-500">Conociendo Colonia MTB</p>
-          <h2 id="resultados-campeonato" className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">Resultados Campeonato</h2>
-          <div className="mt-4 inline-flex border border-lime-400" role="group" aria-label="Elegir modalidad">
-            <button type="button" onClick={() => setModalidad('Participativa')} className={`px-5 py-3 font-bold transition-colors ${modalidad === 'Participativa' ? 'bg-lime-500 text-white' : 'bg-white text-neutral-800 hover:bg-lime-50'}`}>Participativa</button>
-            <button type="button" onClick={() => setModalidad('Competitiva')} className={`px-5 py-3 font-bold transition-colors ${modalidad === 'Competitiva' ? 'bg-lime-500 text-white' : 'bg-white text-neutral-800 hover:bg-lime-50'}`}>Competitiva</button>
-          </div>
-        </div>
-        {modalidad === 'Participativa' ? <Participativa /> : <Competitiva />}
-      </section>
     </div>
   )
 }

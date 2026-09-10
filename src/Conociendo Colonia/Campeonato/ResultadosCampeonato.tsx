@@ -8,6 +8,7 @@ type Resultado = {
   nombre: string
   genero: 'F' | 'M'
   categoria: string
+  posCat: number
   puntaje: number
 }
 
@@ -31,6 +32,7 @@ const extraerResultados = (texto: string): Resultado[] => {
       nombre: coincidencia[1].trim(),
       genero: coincidencia[2] as 'F' | 'M',
       categoria: coincidencia[3].trim(),
+      posCat: Number(coincidencia[4]),
       puntaje: Number(puntajes.at(-1) ?? 0),
     }
   })
@@ -91,7 +93,7 @@ function ResultadosCampeonato({ modalidad, archivo }: ResultadosCampeonatoProps)
         </div>
         {estado === 'cargando' && <p className="py-8 text-center text-neutral-600">Cargando clasificación oficial...</p>}
         {estado === 'error' && <p className="py-8 text-center text-neutral-600">No fue posible cargar los resultados. Consulte el PDF oficial.</p>}
-        {estado === 'listo' && <><div className="overflow-x-auto border border-lime-100"><table className="min-w-full text-sm"><thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">#</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Categoría</th><th className="px-3 py-2 text-center">Puntaje total</th></tr></thead><tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{indice + 1}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td><td className="px-3 py-2 text-center font-semibold">{resultado.puntaje}</td></tr>)}</tbody></table></div><p className="mt-3 text-center text-sm text-neutral-600">Mostrando {resultadosFiltrados.length} de {resultados.length} corredores.</p></>}
+        {estado === 'listo' && <><div className="overflow-x-auto border border-lime-100"><table className="min-w-full text-sm"><thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">Pos. Cat.</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Categoría</th><th className="px-3 py-2 text-center">Puntaje total</th></tr></thead><tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{resultado.posCat}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td><td className="px-3 py-2 text-center font-semibold">{resultado.puntaje}</td></tr>)}</tbody></table></div><p className="mt-3 text-center text-sm text-neutral-600">Mostrando {resultadosFiltrados.length} de {resultados.length} corredores.</p></>}
       </div>
     </section>
   )

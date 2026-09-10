@@ -9,6 +9,7 @@ type Resultado = {
   genero: 'F' | 'M'
   edad: number
   categoria: string
+  posCat: number
   puntaje: number
 }
 
@@ -23,16 +24,23 @@ const extraerResultados = (texto: string): Resultado[] => {
   const expresionFila = /([A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ .'’-]*?)([FM])\s*(\d{2})\s*10\s*([FM])\s*\|\s*(\d{2}-\d{2})/g
   const coincidencias = [...textoResultados.matchAll(expresionFila)]
 
+  const posicionesPorCategoria = new Map<string, number>()
+
   return coincidencias.map((coincidencia, indice) => {
     const finalCategoria = (coincidencia.index ?? 0) + coincidencia[0].length
     const inicioSiguienteFila = coincidencias[indice + 1]?.index ?? textoResultados.length
     const valores = textoResultados.slice(finalCategoria, inicioSiguienteFila).replace(/\D/g, '')
 
+    const categoria = `${coincidencia[4]} | ${coincidencia[5]}`
+    const posCat = (posicionesPorCategoria.get(categoria) ?? 0) + 1
+    posicionesPorCategoria.set(categoria, posCat)
+
     return {
       nombre: coincidencia[1].trim(),
       genero: coincidencia[2] as 'F' | 'M',
       edad: Number(coincidencia[3]),
-      categoria: `${coincidencia[4]} | ${coincidencia[5]}`,
+      categoria,
+      posCat,
       puntaje: Number(valores.slice(-4)),
     }
   })
@@ -43,6 +51,16 @@ const normalizarTexto = (texto: string) =>
     .toLocaleLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
+
+const asignarPosicionesCategoria = (filas: Resultado[]) => {
+  const posicionesPorCategoria = new Map<string, number>()
+
+  return filas.map((fila) => {
+    const posCat = (posicionesPorCategoria.get(fila.categoria) ?? 0) + 1
+    posicionesPorCategoria.set(fila.categoria, posCat)
+    return { ...fila, posCat }
+  })
+}
 
 function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps) {
   const [resultados, setResultados] = useState<Resultado[]>([])
@@ -67,7 +85,7 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
           }),
         )
 
-        const filas = paginas.flatMap(extraerResultados)
+        const filas = asignarPosicionesCategoria(paginas.flatMap(extraerResultados))
 
         if (activo) {
           setResultados(filas)
@@ -96,15 +114,13 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
   )
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-4 py-6">
-      <div className="border border-lime-200 bg-white p-4 shadow-md sm:p-6">
-        <header className="mb-5 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-lime-700">Combo Colonia 26/27</p>
-          <h1 className="mt-1 text-2xl font-extrabold text-neutral-900 sm:text-3xl">Resultados Campeonato {distancia}</h1>
-          <a href={archivo} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-semibold text-lime-700 underline hover:text-lime-900">
-            Ver clasificación oficial en PDF
-          </a>
-        </header>
+    <div className="px-4 pb-4 sm:px-6 sm:pb-6">
+      <header className="mb-5 text-center">
+        <p className="text-sm font-semibold text-neutral-700">Clasificación {distancia}</p>
+        <a href={archivo} target="_blank" rel="noreferrer" className="mt-1 inline-block text-sm font-semibold text-lime-700 underline hover:text-lime-900">
+          Ver clasificación oficial en PDF
+        </a>
+      </header>
 
         <div className="mb-5 grid gap-3 border border-lime-100 bg-lime-50/50 p-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1 text-sm font-semibold text-neutral-800">
@@ -126,15 +142,14 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
           <>
             <div className="overflow-x-auto border border-lime-100">
               <table className="min-w-full text-sm">
-                <thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">#</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Edad</th><th className="px-3 py-2 text-center">Categoría</th><th className="px-3 py-2 text-center">Puntaje</th></tr></thead>
-                <tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{indice + 1}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.edad}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td><td className="px-3 py-2 text-center font-semibold">{resultado.puntaje}</td></tr>)}</tbody>
+                <thead className="bg-lime-100 text-neutral-800"><tr><th className="px-3 py-2 text-left">P. Cat.</th><th className="px-3 py-2 text-left">Corredor</th><th className="px-3 py-2 text-center">Género</th><th className="px-3 py-2 text-center">Edad</th><th className="px-3 py-2 text-center">Categoría</th><th className="px-3 py-2 text-center">Puntaje</th></tr></thead>
+                <tbody>{resultadosFiltrados.map((resultado, indice) => <tr key={`${resultado.nombre}-${resultado.categoria}-${indice}`} className="border-t border-lime-100 odd:bg-white even:bg-lime-50/40"><td className="px-3 py-2">{resultado.posCat}</td><td className="px-3 py-2 font-medium text-neutral-900">{resultado.nombre}</td><td className="px-3 py-2 text-center">{resultado.genero === 'F' ? 'Femenino' : 'Masculino'}</td><td className="px-3 py-2 text-center">{resultado.edad}</td><td className="px-3 py-2 text-center">{resultado.categoria}</td><td className="px-3 py-2 text-center font-semibold">{resultado.puntaje}</td></tr>)}</tbody>
               </table>
             </div>
             <p className="mt-3 text-center text-sm text-neutral-600">Mostrando {resultadosFiltrados.length} de {resultados.length} corredores.</p>
           </>
         )}
-      </div>
-    </section>
+    </div>
   )
 }
 
