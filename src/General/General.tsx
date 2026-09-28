@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function General() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-6" aria-label="Galeria general">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Link
           to="/combo"
           aria-label="Ir a la pagina de Combo Colonia 10K"
