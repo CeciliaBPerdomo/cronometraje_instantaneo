@@ -18,8 +18,9 @@ type ResultadosCampeonatoProps = {
 }
 
 const extraerResultados = (texto: string): Resultado[] => {
-  const indiceEncabezado = texto.lastIndexOf('TOTAL')
-  const textoResultados = indiceEncabezado === -1 ? texto : texto.slice(indiceEncabezado + 5)
+  const textoNormalizado = texto.replace(/\s+/g, ' ').trim()
+  const indiceEncabezado = textoNormalizado.lastIndexOf('TOTAL')
+  const textoResultados = indiceEncabezado === -1 ? textoNormalizado : textoNormalizado.slice(indiceEncabezado + 5)
   const expresionFila = /([A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ .'’-]*?)\s+([FM])\s+([A-Za-zÁÉÍÓÚÜÑáéíóúüñ -]+?)\s+(\d+)/g
   const coincidencias = [...textoResultados.matchAll(expresionFila)]
 
@@ -56,7 +57,7 @@ function ResultadosCampeonato({ modalidad, archivo }: ResultadosCampeonatoProps)
         const paginas = await Promise.all(Array.from({ length: documento.numPages }, async (_, indice) => {
           const pagina = await documento.getPage(indice + 1)
           const contenido = await pagina.getTextContent()
-          return contenido.items.filter((item) => 'str' in item).map((item) => item.str).join('')
+          return contenido.items.filter((item) => 'str' in item).map((item) => item.str).join(' ')
         }))
 
         if (activo) {
