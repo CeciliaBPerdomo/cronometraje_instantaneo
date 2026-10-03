@@ -26,14 +26,24 @@ function ComboPage() {
 					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Juan Lacaze</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">3era Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">3 de octubre</h3>
-					<a
-						href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-3"
-						target="_blank"
-						rel="noreferrer"
-						className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-lime-500 bg-lime-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600"
-					>
-						Inscripciones abiertas
-					</a>
+					<div className="mt-5 grid grid-cols-1 gap-3 text-sm font-semibold uppercase tracking-[0.2em] sm:grid-cols-2">
+						<a
+							href="https://cronometrajeinstantaneo.com/resultados/combo-10k-colonia-3/filtros"
+							target="_blank"
+							rel="noreferrer"
+							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+						>
+							Resultados Generales
+						</a>
+						<a
+							href="https://cronometrajeinstantaneo.com/resultados/combo-10k-colonia-3/consulta"
+							target="_blank"
+							rel="noreferrer"
+							className="flex min-h-16 items-center justify-center rounded-xl border border-lime-300 bg-lime-50 px-4 py-4 text-lime-800 transition-colors duration-200 hover:bg-lime-100"
+						>
+							Resultados Individuales
+						</a>
+					</div>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
@@ -88,6 +98,14 @@ function ComboPage() {
 					<h1 className="mt-1 text-2xl font-bold text-neutral-900" translate="no">Conchillas</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">4ta Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">7 de noviembre</h3>
+					<a
+						href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-4"
+						target="_blank"
+						rel="noreferrer"
+						className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-lime-500 bg-lime-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600"
+					>
+						Inscribite aquí
+					</a>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl sm:col-span-2 lg:col-span-1">
