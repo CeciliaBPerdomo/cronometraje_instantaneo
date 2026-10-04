@@ -19,30 +19,21 @@ type ResultadosCampeonatoProps = {
 }
 
 const extraerResultados = (texto: string): Resultado[] => {
-  const indiceEncabezado = texto.lastIndexOf('TOTAL')
-  const textoResultados = indiceEncabezado === -1 ? texto : texto.slice(indiceEncabezado + 5)
-  const expresionFila = /([A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ .'’-]*?)([FM])\s*(\d{2})\s*10\s*([FM])\s*\|\s*(\d{2}-\d{2})/g
-  const coincidencias = [...textoResultados.matchAll(expresionFila)]
+  const expresionFila = /^(.+?)\s+([FM])\s+(\d+)\s+10\s*([FM])\s*\|\s*(\d{2}-\d{2})\s+(\d+)\s+((?:\d+\s+)*\d+)$/
 
-  const posicionesPorCategoria = new Map<string, number>()
+  return texto.split('\n').flatMap((linea) => {
+    const coincidencia = linea.trim().replace(/\s+/g, ' ').match(expresionFila)
+    if (!coincidencia) return []
+    const puntajes = coincidencia[7].split(' ')
 
-  return coincidencias.map((coincidencia, indice) => {
-    const finalCategoria = (coincidencia.index ?? 0) + coincidencia[0].length
-    const inicioSiguienteFila = coincidencias[indice + 1]?.index ?? textoResultados.length
-    const valores = textoResultados.slice(finalCategoria, inicioSiguienteFila).replace(/\D/g, '')
-
-    const categoria = `${coincidencia[4]} | ${coincidencia[5]}`
-    const posCat = (posicionesPorCategoria.get(categoria) ?? 0) + 1
-    posicionesPorCategoria.set(categoria, posCat)
-
-    return {
+    return [{
       nombre: coincidencia[1].trim(),
       genero: coincidencia[2] as 'F' | 'M',
       edad: Number(coincidencia[3]),
-      categoria,
-      posCat,
-      puntaje: Number(valores.slice(-4)),
-    }
+      categoria: `${coincidencia[4]} | ${coincidencia[5]}`,
+      posCat: Number(coincidencia[6]),
+      puntaje: Number(puntajes.at(-1)),
+    }]
   })
 }
 
@@ -52,16 +43,6 @@ const normalizarTexto = (texto: string) =>
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
 
-const asignarPosicionesCategoria = (filas: Resultado[]) => {
-  const posicionesPorCategoria = new Map<string, number>()
-
-  return filas.map((fila) => {
-    const posCat = (posicionesPorCategoria.get(fila.categoria) ?? 0) + 1
-    posicionesPorCategoria.set(fila.categoria, posCat)
-    return { ...fila, posCat }
-  })
-}
-
 function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps) {
   const [resultados, setResultados] = useState<Resultado[]>([])
   const [busqueda, setBusqueda] = useState('')
@@ -70,6 +51,9 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
 
   useEffect(() => {
     let activo = true
+    setEstado('cargando')
+    setResultados([])
+    setCategoria('Todas')
 
     const cargarResultados = async () => {
       try {
@@ -78,14 +62,25 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
           Array.from({ length: documento.numPages }, async (_, indice) => {
             const pagina = await documento.getPage(indice + 1)
             const contenido = await pagina.getTextContent()
-            return contenido.items
-              .filter((item) => 'str' in item)
-              .map((item) => item.str)
-              .join('')
+            const lineas: { y: number; fragmentos: { x: number; texto: string }[] }[] = []
+            for (const item of contenido.items) {
+              if (!('str' in item) || !item.str.trim()) continue
+              const y = item.transform[5]
+              let linea = lineas.find((fila) => Math.abs(fila.y - y) < 2)
+              if (!linea) {
+                linea = { y, fragmentos: [] }
+                lineas.push(linea)
+              }
+              linea.fragmentos.push({ x: item.transform[4], texto: item.str })
+            }
+            return lineas.sort((a, b) => b.y - a.y).map((linea) =>
+              linea.fragmentos.sort((a, b) => a.x - b.x).map((fragmento) => fragmento.texto).join(' '),
+            ).join('\n')
           }),
         )
 
-        const filas = asignarPosicionesCategoria(paginas.flatMap(extraerResultados))
+        const filas = paginas.flatMap(extraerResultados)
+        if (filas.length === 0) throw new Error('El PDF no contiene filas reconocibles')
 
         if (activo) {
           setResultados(filas)
@@ -117,9 +112,6 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
     <div className="px-4 pb-4 sm:px-6 sm:pb-6">
       <header className="mb-5 text-center">
         <p className="text-sm font-semibold text-neutral-700">Clasificación {distancia}</p>
-        <a href={archivo} target="_blank" rel="noreferrer" className="mt-1 inline-block text-sm font-semibold text-lime-700 underline hover:text-lime-900">
-          Ver clasificación oficial en PDF
-        </a>
       </header>
 
         <div className="mb-5 grid gap-3 border border-lime-100 bg-lime-50/50 p-3 sm:grid-cols-2">
