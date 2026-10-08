@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import archivo5k from '../Combo/Campeonato/CAMP5cat.pdf'
+import archivo10k from '../Combo/Campeonato/CAMP10cat.pdf'
 
 function ComboPage() {
 	return (
@@ -13,14 +15,25 @@ function ComboPage() {
 				</h2>
 			</header>
 
-			<Link
-				to="/combo/resultados"
-				className="mb-5 flex w-full flex-col items-center justify-center border border-lime-400 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-			>
+			<article className="mb-5 flex w-full flex-col items-center justify-center border border-lime-400 bg-white p-6 text-center shadow-md">
 				<h1 className="text-2xl font-extrabold text-neutral-900">Resultados del campeonato</h1>
 				<p className="mt-2 text-lg font-semibold text-neutral-700">Luego de la 3er fecha</p>
-				<span className="mt-3 border border-lime-500 bg-lime-500 px-5 py-2 text-sm font-bold uppercase tracking-wide text-white">Ver resultados</span>
-			</Link>
+				<Link
+					to="/combo/resultados"
+					className="mt-3 inline-flex min-h-11 items-center justify-center border border-lime-500 bg-lime-500 px-5 py-2 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600"
+				>
+					Ver resultados
+				</Link>
+				<div className="mt-4 flex flex-wrap justify-center gap-3">
+					<a href={archivo5k} download="Combo-Colonia-Campeonato-5K.pdf" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-lime-50 px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-100">
+						Descargar PDF 5K
+					</a>
+					<a href={archivo10k} download="Combo-Colonia-Campeonato-10K.pdf" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-lime-50 px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-100">
+						Descargar PDF 10K
+					</a>
+				</div>
+				<p className="mt-3 text-xs text-neutral-600">En iPhone, si el PDF se abre en una pestaña, usa Compartir y luego “Guardar en Archivos”.</p>
+			</article>
 
 			<section className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-label="Etapas de Combo Colonia 10K">
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
