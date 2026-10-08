@@ -117,11 +117,26 @@ function ResultadosCampeonato({ distancia, archivo }: ResultadosCampeonatoProps)
         <div className="mb-5 grid gap-3 border border-lime-100 bg-lime-50/50 p-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1 text-sm font-semibold text-neutral-800">
             Buscar corredor
-            <input value={busqueda} onChange={(event) => setBusqueda(event.target.value)} placeholder="Nombre o apellido" className="border border-lime-300 bg-white px-3 py-2 font-normal outline-none focus:border-lime-600" />
+            <input
+              type="search"
+              value={busqueda}
+              onChange={(event) => setBusqueda(event.target.value)}
+              placeholder="Nombre o apellido"
+              autoComplete="off"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              enterKeyHint="search"
+              className="min-h-12 w-full min-w-0 rounded-lg border border-lime-300 bg-white px-3 py-2 text-[16px] font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+            />
           </label>
           <label className="flex flex-col gap-1 text-sm font-semibold text-neutral-800">
             Categoría
-            <select value={categoria} onChange={(event) => setCategoria(event.target.value)} className="border border-lime-300 bg-white px-3 py-2 font-normal outline-none focus:border-lime-600">
+            <select
+              value={categoria}
+              onChange={(event) => setCategoria(event.target.value)}
+              className="min-h-12 w-full min-w-0 rounded-lg border border-lime-300 bg-white px-3 py-2 text-[16px] font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+            >
               <option>Todas</option>
               {categorias.map((opcion) => <option key={opcion}>{opcion}</option>)}
             </select>
