@@ -48,14 +48,6 @@ function ComboPage() {
 					>
 						Inscribite aquí
 					</a>
-					<a
-						href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-5"
-						target="_blank"
-						rel="noreferrer"
-						className="mt-3 inline-flex min-h-12 items-center justify-center rounded-xl border border-lime-500 bg-lime-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600"
-					>
-						Inscripciones abiertas
-					</a>
 				</article>
 
 				<article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
@@ -134,6 +126,14 @@ function ComboPage() {
 					<h1 className="mt-1 text-2xl font-bold text-neutral-900">Santa Ana</h1>
 					<h6 className="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-600">5ta Etapa</h6>
 					<h3 className="text-xl font-semibold text-neutral-900">16 de enero</h3>
+					<a
+						href="https://cronometrajeinstantaneo.com/inscripciones/combo-10k-colonia-5"
+						target="_blank"
+						rel="noreferrer"
+						className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-lime-500 bg-lime-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600"
+					>
+						Inscripciones abiertas
+					</a>
 				</article>
 			</section>
 		</div>
