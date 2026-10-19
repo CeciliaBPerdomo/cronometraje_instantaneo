@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import participativaMasc from '../Conociendo Colonia/Campeonato/ParticipativaGRAL-MASC.pdf'
+import participativaFem from '../Conociendo Colonia/Campeonato/ParticipativaGRAL-FEM.pdf'
+import competitivaMasc from '../Conociendo Colonia/Campeonato/CompetitivaGRAL-MASC.pdf'
+import competitivaFem from '../Conociendo Colonia/Campeonato/CompetitivaGRAL-FEM.pdf'
 
 function ConociendoColoniaPage() {
+  const [mostrarClasificaciones, setMostrarClasificaciones] = useState(false)
+
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-6">
       <header className="mb-8 text-center">
@@ -13,11 +20,28 @@ function ConociendoColoniaPage() {
         </h2>
       </header>
 
-      <Link to="/conociendo-colonia-mtb/resultados" className="mb-5 flex w-full flex-col items-center justify-center border border-lime-400 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <article className="mb-5 flex w-full flex-col items-center justify-center border border-lime-400 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
         <h1 className="text-2xl font-extrabold text-neutral-900">Resultados del campeonato</h1>
-        <span className="mt-3 border border-lime-500 bg-lime-500 px-5 py-2 text-sm font-bold uppercase tracking-wide text-white">Resultados</span>
-        <span className="mt-2 text-xs text-neutral-500">(luego de la 2da fecha)</span>
-      </Link>
+        <Link to="/conociendo-colonia-mtb/resultados" className="mt-3 inline-flex min-h-11 items-center justify-center border border-lime-500 bg-lime-500 px-5 py-2 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-lime-600">
+          Resultados finales por categorías
+        </Link>
+        <button
+          type="button"
+          aria-expanded={mostrarClasificaciones}
+          onClick={() => setMostrarClasificaciones(!mostrarClasificaciones)}
+          className="mt-4 inline-flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-lime-50 px-5 py-2 text-sm font-bold uppercase tracking-wide text-lime-800 transition-colors hover:bg-lime-100"
+        >
+          Clasificaciones generales del campeonato
+        </button>
+        {mostrarClasificaciones && (
+          <div className="mt-4 grid w-full max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Clasificaciones generales">
+            <a href={participativaMasc} target="_blank" rel="noreferrer" className="flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-white px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-50">Gral Participativa Masc.</a>
+            <a href={participativaFem} target="_blank" rel="noreferrer" className="flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-white px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-50">Gral Participativa Fem.</a>
+            <a href={competitivaMasc} target="_blank" rel="noreferrer" className="flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-white px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-50">Gral Competitiva Masc.</a>
+            <a href={competitivaFem} target="_blank" rel="noreferrer" className="flex min-h-11 items-center justify-center rounded-lg border border-lime-300 bg-white px-4 py-2 text-sm font-semibold text-lime-800 transition-colors hover:bg-lime-50">Gral Competitiva Fem.</a>
+          </div>
+        )}
+      </article>
 
       <section className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-label="Fechas de Conociendo Colonia MTB">
         <article className="rounded-2xl border border-lime-200 bg-white p-6 text-center shadow-md transition-transform duration-200 hover:-translate-y-1.5 hover:shadow-xl">
