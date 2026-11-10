@@ -18,6 +18,7 @@ import Resultados10k from './Combo/Resultados10k.tsx'
 import ResultadosComboPage from './Combo/ResultadosComboPage.tsx'
 import ResultadosConociendoPage from './Conociendo Colonia/Campeonato/ResultadosConociendoPage.tsx'
 import TripleCorona2026 from './TripleCorona/TripleCorona2026.tsx'
+import Triexperience from './pages/Triexperience.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/cac" element={<CacPage />} />
           <Route path="/cac/triple-corona-2026" element={<TripleCorona2026 />} />
           <Route path="/campero" element={<Campero />} />
+          <Route path="/triexperience" element={<Triexperience />} />
           <Route path="/conociendo-colonia-mtb" element={<ConociendoColoniaPage />} />
           <Route path="/conociendo-colonia-mtb/resultados" element={<ResultadosConociendoPage />} />
           <Route path="/combo" element={<ComboPage />} />
