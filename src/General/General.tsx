@@ -12,12 +12,12 @@ function General() {
         <Link
           to="/triexperience"
           aria-label="Ir a la página de Triexperience"
-          className="group overflow-hidden rounded-xl border border-lime-400/40 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)]"
+          className="group overflow-hidden rounded-xl border border-neutral-700 bg-neutral-950 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-lime-400/60 hover:shadow-[0_14px_30px_rgba(132,204,22,0.28)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-400"
         >
           <img
             src={triexperienceImage}
             alt="Triexperience"
-            className="h-56 w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+            className="h-56 w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
           />
         </Link>
         <Link
